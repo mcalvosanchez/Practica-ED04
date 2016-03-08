@@ -17,22 +17,45 @@ public class Reloj {
     private int dia;
     private int mes;
 
+    /**
+     *
+     * @return
+     */
     public int getDia() {
         return dia;
     }
 
+    /**
+     *
+     * @param dia
+     */
     public void setDia(int dia) {
         this.dia = dia;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getMes() {
         return mes;
     }
 
+    /**
+     *
+     * @param mes
+     */
     public void setMes(int mes) {
         this.mes = mes;
     }
     //Constructor con parámetros
+
+    /**
+     *
+     * @param hora
+     * @param minuto
+     * @param segundo
+     */
     public Reloj(int hora, int minuto, int segundo) {
         this.HH = hora;
         this.MM = minuto;
@@ -40,33 +63,60 @@ public class Reloj {
     }
     //Métodos para asignar valores a los atributos HH, MM y SS
     
+    /**
+     *
+     * @param hora
+     */
     public void setHH(int hora) {
         this.HH = hora;
     }
 
+    /**
+     *
+     * @param minuto
+     */
     public void setMM(int minuto) {
         this.MM = minuto;
     }
 
-    
+    /**
+     *
+     * @param segundo
+     */
     public void setSS(int segundo) {    
         this.SS = segundo;
     }
  //Métodos para devolver valores de los atributos HH, MM y SS
 
+    /**
+     *
+     * @return
+     */
     public int getHH() {
         return HH;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getMM() {
         return MM;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getSS() {
         return SS;
     }
     
     //Método que incrementa 1 SS la HH
+
+    /**
+     *
+     */
     public void incrementa() {
         boolean cambio_m, cambio_h;
         cambio_m = (getSS() + 1 > 59) ? true : false;
@@ -78,6 +128,10 @@ public class Reloj {
         setSS((getSS() + 1 > 59) ? 0 : getSS() + 1);
     }
     //Método que decrementa un SS la HH
+
+    /**
+     *
+     */
     public void decrementa() {
         boolean cambio_m, cambio_h;
 
@@ -93,6 +147,11 @@ public class Reloj {
 
     }
     //Método que da la HH en formato 12H
+
+    /**
+     *
+     * @return
+     */
     public String hora12() {
         
         String mediodia, cadena;
@@ -111,6 +170,11 @@ public class Reloj {
 
     }
     //Método que da la HH en formato 24H
+
+    /**
+     *
+     * @return
+     */
     public String hora24() {
         
         String cadena;
